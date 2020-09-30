@@ -1,17 +1,14 @@
 <template>
   <div class="tag">
     <div class="tag-wrapper">
-      <div class="tag-vertical" v-for="(horizontal, row) in cells" :key="row">
-        <div
-          class="tag-horizontal"
-          v-for="(cell, col) in horizontal"
-          :key="col"
-        >
+      <div class="tag-horizontal" v-for="(horizontal, row) in cells" :key="row">
+        <div class="cell" v-for="(cell, col) in horizontal" :key="col">
           <div @click="move(row, col)" v-if="cell" class="tag-cell">
             <span>
               {{ cell }}
             </span>
           </div>
+          <div v-else class="cell-null"></div>
         </div>
       </div>
     </div>
@@ -19,6 +16,7 @@
       <p>Победа</p>
       <button @click="fillCells">Еще</button>
     </div>
+    <button @click="win">Выиграть</button>
   </div>
 </template>
 
@@ -39,6 +37,13 @@ export default {
     this.fillCells();
   },
   methods: {
+    win() {
+      this.cells = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 0],
+      ];
+    },
     move(row, col) {
       const swap = (rowOfNull, colOfNull) => {
         this.$set(this.cells[rowOfNull], colOfNull, this.cells[row][col]);
@@ -52,6 +57,7 @@ export default {
       else if (this.cells[row][col - 1] == 0) swap(row, col - 1);
     },
     fillCells() {
+      this.cells = [];
       const pull = this.dimension ** 2;
       const cells = [];
       for (let i = 0; i < pull; i++) {
@@ -67,7 +73,9 @@ export default {
   computed: {
     winCondition() {
       return !this.cells.find((cellX, row) =>
-        cellX.find((cell, col) => row * this.dimension + col + 1 !== this.cells[row][col])
+        cellX.find(
+          (cell, col) => row * this.dimension + col + 1 !== this.cells[row][col]
+        )
       );
     },
   },
@@ -79,31 +87,33 @@ export default {
   height: 100%;
 }
 .tag-wrapper {
-  border: 2px solid black;
-  display: flex;
-  height: 100%;
-  align-items: stretch;
-  position: relative;
-}
-.tag-vertical {
-  flex-grow: 1;
+  border: 15px solid black;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  height: 100%;
 }
 .tag-horizontal {
-  position: relative;
+  display: flex;
   height: 100%;
+}
+.cell {
+  height: 100%;
+  width: 100%;
 }
 .tag-cell {
   height: 100%;
+  width: 100%;
+  background-color: rgb(73, 73, 73);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(73, 73, 73);
   border: 2px solid darkgrey;
-  border-radius: 2px;
   cursor: pointer;
+}
+.cell-null {
+  height: 100%;
+  width: 100%;
+  border: 2px solid darkgrey;
 }
 span {
   color: white;

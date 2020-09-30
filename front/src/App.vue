@@ -22,17 +22,4 @@ export default {
   height: 500px;
   width: 500px;
 }
-/* flex  */
-.d-flex {
-  display: flex;
-}
-.justify-content-center {
-  justify-content: center;
-}
-.align-items-stretch {
-  align-items: stretch;
-}
-.align-items {
-  align-items: center;
-}
 </style>
