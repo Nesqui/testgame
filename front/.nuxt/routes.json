@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Tag",
+    "path": "/Tag",
+    "component": "C:\\\\Users\\\\nesqu\\\\Desktop\\\\testgame\\\\front\\\\pages\\\\Tag.vue",
+    "chunkName": "pages/Tag",
+    "_name": "_57a3599c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\nesqu\\\\Desktop\\\\testgame\\\\front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2b63d474"
+  }
+]
