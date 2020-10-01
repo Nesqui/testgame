@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _57a3599c = () => interopDefault(import('..\\pages\\Tag.vue' /* webpackChunkName: "pages/Tag" */))
-const _2b63d474 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _0f74c580 = () => interopDefault(import('..\\pages\\Tag.vue' /* webpackChunkName: "pages/Tag" */))
+const _2c83bf18 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -24,11 +24,11 @@ export const routerOptions = {
 
   routes: [{
     path: "/Tag",
-    component: _57a3599c,
+    component: _0f74c580,
     name: "Tag"
   }, {
     path: "/",
-    component: _2b63d474,
+    component: _2c83bf18,
     name: "index"
   }],
 

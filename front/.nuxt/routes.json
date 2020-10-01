@@ -2,15 +2,15 @@
   {
     "name": "Tag",
     "path": "/Tag",
-    "component": "C:\\\\Users\\\\nesqu\\\\Desktop\\\\testgame\\\\front\\\\pages\\\\Tag.vue",
+    "component": "C:\\\\Users\\\\nesqu\\\\Documents\\\\testgame\\\\front\\\\pages\\\\Tag.vue",
     "chunkName": "pages/Tag",
-    "_name": "_57a3599c"
+    "_name": "_0f74c580"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\nesqu\\\\Desktop\\\\testgame\\\\front\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\nesqu\\\\Documents\\\\testgame\\\\front\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_2b63d474"
+    "_name": "_2c83bf18"
   }
 ]

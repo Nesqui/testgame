@@ -10,5 +10,13 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "vue": "^2.6.12",
+    "vue-client-only": "^2.0.0",
+    "vue-meta": "^2.4.0",
+    "vue-no-ssr": "^1.1.1",
+    "vue-router": "^3.4.5"
   }
 }
