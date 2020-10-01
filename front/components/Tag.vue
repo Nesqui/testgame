@@ -10,6 +10,7 @@
         <span v-if="cell != 0">{{ cell }}</span>
       </button>
     </transition-group>
+    <p>Перемещений: {{clicks}}</p>
     <div class="rusult" v-if="winCondition">Победа</div>
     <button @click="win">Победить</button>
     <button @click="fillCells">Заново</button>
@@ -20,6 +21,7 @@
 export default {
   data: () => ({
     cells: [],
+    clicks: 0,
     dimension: 4,
   }),
   beforeMount() {
@@ -34,6 +36,7 @@ export default {
       this.cells.push(0);
     },
     fillCells() {
+      this.clicks = 0
       this.cells = [];
       for (let i = 0; i < this.dimension ** 2; i++) {
         this.cells.push(i);
@@ -43,6 +46,7 @@ export default {
     swap(index, nullIndex) {
       this.cells.splice(nullIndex, 1, this.cells[index]);
       this.cells.splice(index, 1, 0);
+      this.clicks++
     },
     move(index) {
       if (this.cells[index + this.dimension] === 0)
