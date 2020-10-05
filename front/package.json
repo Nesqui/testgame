@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
+    "nuxt": "^2.14.6",
     "vue": "^2.6.12",
     "vue-client-only": "^2.0.0",
     "vue-meta": "^2.4.0",
